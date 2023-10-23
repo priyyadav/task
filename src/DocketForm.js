@@ -37,7 +37,7 @@ const DocketForm = () => {
                 const jsonData = XLSX.utils.sheet_to_json(sheet, { header: 'A' });
 
                 // Extract unique suppliers from the JSON data
-                const suppliers = [...new Set(jsonData.map((item) => item.L))];
+                const suppliers = [...new Set(jsonData.map((item) => item.M))];
                 const filteredSuppliers = suppliers.filter((supplier, index) => index !== 0 && supplier.trim() !== '');
 
                 setSupplierOptions(filteredSuppliers);
@@ -69,9 +69,13 @@ const DocketForm = () => {
 
         if (name === 'supplier') {
             const selectedSupplier = value;
-            const filteredPOs = jsonData.filter((item) => item.L === selectedSupplier);
 
-            const purchaseOrders = [...new Set(filteredPOs.map((item) => item.B))];
+            const filteredPOs = jsonData.filter((item) => {
+
+                return item.M === selectedSupplier
+            });
+
+            const purchaseOrders = [...new Set(filteredPOs.map((item) => item.C))];
             const filteredPurchaseOrders = purchaseOrders.filter(
                 (purchaseOrder, index) => purchaseOrder.trim() !== ''
             );
@@ -81,10 +85,11 @@ const DocketForm = () => {
 
         if (name === 'purchaseOrder') {
             const selectedPO = value;
-            const selectedData = jsonData.find((item) => item.B === selectedPO);
-            console.log(selectedData)
+
+            const selectedData = jsonData.find((item) => item.C === selectedPO);
+
             if (selectedData) {
-                setDesc(selectedData.P); // Replace with the actual field name from your Excel data
+                setDesc(selectedData.Q); // Replace with the actual field name from your Excel data
             } else {
                 setDesc(''); // If no data is found for the selected purchase order, clear the description
             }
