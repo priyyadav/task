@@ -1,70 +1,95 @@
-# Getting Started with Create React App
+# DocketForm React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The DocketForm React App is a web application for creating and managing dockets. It allows users to input information such as their name, start and end times, hours worked, rate per hour, and more. Additionally, it fetches data from an Excel file to populate supplier and purchase order options.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- Create and manage dockets with detailed information.
+- Select suppliers and purchase orders from Excel data.
+- Format time values for better readability.
+- Store and display docket information in a tabular format.
 
-### `npm start`
+## Prerequisites
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Before running the app locally, make sure you have the following tools and dependencies installed on your computer:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Node.js and npm (Node Package Manager)
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To get started with this project, follow these steps:
 
-### `npm run build`
+1. **Clone the Repository**
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   git clone https://github.com/priyyadav/task.git
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1.Navigate to the Project Directory:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```cd task ```
 
-### `npm run eject`
+2.Install Dependencies:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+```npm install```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3.Run the Application:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+```npm start```
 
-## Learn More
+The app will be available at http://localhost:3000 in your web browser.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+** How to Use the Application**
+1.Fill Out the Form:
 
-### Code Splitting
+```Name```: Enter your name.
+```Start Time```: Select the start time using the "Start Time" input field.
+```End Time```: Select the end time using the "End Time" input field. The "End Time" must be after the "Start Time."
+```No. of Hours Worked```: Specify the number of hours worked.
+```Rate Per Hour```: Enter your rate per hour.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+2.Choose a Supplier:
 
-### Analyzing the Bundle Size
+Select a supplier from the dropdown list. The options are populated from the Excel data.
+Select a Purchase Order:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+After selecting a supplier, you can choose a related purchase order from the dropdown list. Options are populated from the Excel data.
 
-### Making a Progressive Web App
+3.Description:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The description field is read-only and is automatically filled when you select a purchase order. It provides additional details about the selected purchase order.
 
-### Advanced Configuration
+**Submit the Form:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+Click the "Submit" button to save the docket entry.
 
-### Deployment
+**View Docket Entries:**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+All docket entries are displayed in a table below the form. You can view and manage your previous entries.
 
-### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+If you'd like to contribute to this project, please consider opening an issue or creating a pull request on the GitHub repository.
+
+**License**
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+Feel free to use this README file as part of your project documentation. You can customize it further to include more project-specific information, such as installation instructions, configuration details, and deployment steps.
+
+**About Each Form Data**
+
+Name: Your name goes here.
+
+Start Time: Select the start time for your docket entry. This must be a valid date and time.
+
+End Time: Choose the end time for your docket entry. It should be later than the start time.
+
+No. of Hours Worked: Enter the number of hours you worked.
+
+Rate Per Hour: Specify your hourly rate.
+
+Supplier: Select the supplier related to your docket entry. Options are fetched from an Excel file.
+
+Purchase Order: Choose a purchase order associated with the selected supplier. The options are populated from the Excel data.
+
+Desc: The description field provides additional information about the selected purchase order. It's automatically filled when you select a purchase order.
