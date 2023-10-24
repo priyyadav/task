@@ -40,7 +40,7 @@ To get started with this project, follow these steps:
 The app will be available at http://localhost:3000 in your web browser.
 
 
-** How to Use the Application**
+## How to Use the Application
 1.Fill Out the Form:
 
 ```Name```: Enter your name.
@@ -64,19 +64,29 @@ The description field is read-only and is automatically filled when you select a
 
 Click the "Submit" button to save the docket entry.
 
-**View Docket Entries:**
+## Local Storage Functionality
+
+The DocketForm React App utilizes local storage to provide data persistence and allow users to store and retrieve their docket entries even after refreshing the page or closing the browser. Here's how local storage is used in the application:
+
+- **Storing Docket Entries**: When a user submits a docket entry through the form, the data is serialized and stored in the browser's local storage. This means that your entries remain accessible, and you won't lose your data even if you leave or refresh the page.
+
+- **Retrieving Docket Entries**: When the DocketForm React App is loaded, it checks local storage for previously submitted docket entries. If any entries are found, they are deserialized and displayed in the table, so you can view and manage your previous entries.
+
+This local storage functionality enhances the user experience by ensuring data persistence and easy access to historical docket entries.
+
+## View Docket Entries:
 
 All docket entries are displayed in a table below the form. You can view and manage your previous entries.
 
 
 If you'd like to contribute to this project, please consider opening an issue or creating a pull request on the GitHub repository.
 
-**License**
+## License
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 Feel free to use this README file as part of your project documentation. You can customize it further to include more project-specific information, such as installation instructions, configuration details, and deployment steps.
 
-**About Each Form Data**
+## About Each Form Data
 
 Name: Your name goes here.
 
